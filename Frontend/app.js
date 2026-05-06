@@ -1,4 +1,4 @@
-const vaultRoot = '../';
+const vaultRoot = './';
 
 // Auto-detect backend URL based on where the page is served from:
 //   - http.server on :8000 (bash Frontend/start.sh)         → talk to :5001 cross-origin
@@ -357,13 +357,13 @@ async function loadPage(filePath, pageName) {
 
         const lowerPageName = pageName.toLowerCase();
         const riveConfigs = {
-            'overview': { src: 'Asset/mbf.riv', artboard: 'Main', stateMachine: 'State Machine 1', anchor: '70+ sản phẩm.', aspectRatio: '19/6' },
-            'akabot': { src: 'Asset/akabot_mascot.riv', artboard: 'Main', stateMachine: 'State Machine 1', aspectRatio: '1/1', style: 'max-width: 400px; margin-left: auto; margin-right: auto; margin-top: -2rem; border-radius: 20px;' },
-            'vioedu': { src: 'Asset/vioedu_mascot.riv', artboard: 'Main', stateMachine: 'State Machine 1', aspectRatio: '1/1', style: 'max-width: 400px; margin-left: auto; margin-right: auto; margin-top: -2rem; border-radius: 20px;' },
-            'vertzero': { src: 'Asset/vertzero.riv', artboard: 'Main', stateMachine: 'State Machine 1' },
-            'vertzéro': { src: 'Asset/vertzero.riv', artboard: 'Main', stateMachine: 'State Machine 1' },
-            'azladin': { src: 'Asset/brochure_azladin.riv', artboard: 'Main', stateMachine: 'State Machine 1' },
-            'azinsu': { src: 'Asset/azinsu_claim.riv', artboard: 'Main', stateMachine: 'State Machine 1', anchor: '## AI CLAIM sub-product' }
+            'overview': { src: 'Frontend/Asset/mbf.riv', artboard: 'Main', stateMachine: 'State Machine 1', anchor: '70+ sản phẩm.', aspectRatio: '19/6' },
+            'akabot': { src: 'Frontend/Asset/akabot_mascot.riv', artboard: 'Main', stateMachine: 'State Machine 1', aspectRatio: '1/1', style: 'max-width: 400px; margin-left: auto; margin-right: auto; margin-top: -2rem; border-radius: 20px;' },
+            'vioedu': { src: 'Frontend/Asset/vioedu_mascot.riv', artboard: 'Main', stateMachine: 'State Machine 1', aspectRatio: '1/1', style: 'max-width: 400px; margin-left: auto; margin-right: auto; margin-top: -2rem; border-radius: 20px;' },
+            'vertzero': { src: 'Frontend/Asset/vertzero.riv', artboard: 'Main', stateMachine: 'State Machine 1' },
+            'vertzéro': { src: 'Frontend/Asset/vertzero.riv', artboard: 'Main', stateMachine: 'State Machine 1' },
+            'azladin': { src: 'Frontend/Asset/brochure_azladin.riv', artboard: 'Main', stateMachine: 'State Machine 1' },
+            'azinsu': { src: 'Frontend/Asset/azinsu_claim.riv', artboard: 'Main', stateMachine: 'State Machine 1', anchor: '## AI CLAIM sub-product' }
         };
 
         const pageRive = riveConfigs[lowerPageName];
@@ -838,7 +838,7 @@ chatInput.addEventListener('keypress', (e) => {
 
 
 // ====== Rive Animation ======
-function initRive(src = 'Asset/test.riv', artboard = 'Main', stateMachine = 'State Machine 1') {
+function initRive(src = 'Frontend/Asset/test.riv', artboard = 'Main', stateMachine = 'State Machine 1') {
     const canvas = document.getElementById('rive-canvas');
     if (!canvas) return;
 
